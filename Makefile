@@ -1,5 +1,5 @@
 MAIN = main
-BUILDDIR = build
+BUILDDIR = .build
 OUTDIR = output
 DATE := $(shell date +%Y-%m-%d)
 
@@ -23,4 +23,8 @@ clean:
 cleanall: clean
 	rm -rf $(OUTDIR)
 
-.PHONY: all clean cleanall
+format:
+	latexindent -w -s main.tex resume.cls sections/*.tex
+	rm -f *.bak* indent.log sections/*.bak* sections/indent.log
+
+.PHONY: all clean cleanall format

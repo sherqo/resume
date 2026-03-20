@@ -25,16 +25,16 @@
 			\def \@addresstwo {#1}
 		}{
 			\def \@addressthree {#1}
-	}}
+		}}
 }
 
 \def \printaddress #1{
-	\begingroup
-	\def \\ {\addressSep\ }
-	\centerline{#1}
-	\endgroup
-	\par
-	\addressskip
+\begingroup
+\def \\ {\addressSep\ }
+\centerline{#1}
+\endgroup
+\par
+\addressskip
 }
 
 \def \printname {
@@ -62,7 +62,7 @@
 			\setlength{\leftmargin}{1.5em}
 		}
 		\item[]
-	}{
+		      }{
 	\end{list}
 }
 

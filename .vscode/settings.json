@@ -1,0 +1,7 @@
+{
+  "latex-workshop.latex.external.build.command": "make",
+  "latex-workshop.latex.external.build.args": [],
+  "latex-workshop.latex.build.fromWorkspaceFolder": true,
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.autoBuild.run": "onSave"
+}
