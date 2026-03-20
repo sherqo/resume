@@ -23,7 +23,7 @@ jobs:
       - name: Prepare deployment folder
         run: |
           mkdir -p deploy
-          cp output/*.pdf deploy/resume.pdf
+          cp .build/*.pdf deploy/resume.pdf
           echo '<meta http-equiv="refresh" content="0; url=resume.pdf">' > deploy/index.html
 
       - name: Deploy to GitHub Pages
