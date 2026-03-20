@@ -1,0 +1,33 @@
+name: Build and Deploy Resume
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended
+
+      - name: Build PDF
+        run: make
+
+      - name: Prepare deployment folder
+        run: |
+          mkdir -p deploy
+          cp output/*.pdf deploy/resume.pdf
+          echo '<meta http-equiv="refresh" content="0; url=resume.pdf">' > deploy/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: deploy
