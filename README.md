@@ -17,7 +17,7 @@ Simple local resume builder with formatting helper.
 On Linux:
 
 ```bash
-sudo pacman -Syu texlive-core texlive-fontsrecommended texlive-bin perl-yaml-tiny git
+sudo pacman -Syu texlive-core texlive-fontsrecommended texlive-fonts-extra texlive-bin perl-yaml-tiny git
 ```
 
 `make format` uses `latexindent`. If you get `Can't locate YAML/Tiny.pm`, install:

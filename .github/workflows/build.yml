@@ -15,7 +15,7 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 
       - name: Build PDF
         run: make
