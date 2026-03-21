@@ -1,11 +1,22 @@
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 \LoadClass[11pt,letterpaper]{article}
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
 \usepackage[parfill]{parskip}
 \usepackage{array}
 \usepackage{ifthen}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \pagestyle{empty}
+
+
+\usepackage[T1]{fontenc}
+% \usepackage{lmodern} % the original font 
+% \usepackage{newpxtext} % good and safe 
+% \usepackage{ebgaramond} % i think that's better 
+\usepackage{cochineal}  % better than ebgaramond 
+% \usepackage{crimson}      % very readable, warm serif, better at numbers 
+% \usepackage{libertine}    % very clean, why everyone is better than the prev
+% \usepackage{stix2}        % so readable really and not bad 
 
 \setlist[itemize]{nosep}
 

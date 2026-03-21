@@ -1,12 +1,13 @@
 MAIN = main
 BUILDDIR = .build
 OUTDIR = output
+OUT ?= $(MAIN)
 DATE := $(shell date +%Y-%m-%d)
 
 all: $(BUILDDIR) $(OUTDIR)
 	@pdflatex -interaction=nonstopmode -output-directory=$(BUILDDIR) $(MAIN)
 	@pdflatex -interaction=nonstopmode -output-directory=$(BUILDDIR) $(MAIN)
-	@cp $(BUILDDIR)/$(MAIN).pdf $(OUTDIR)/$(MAIN)_$(DATE).pdf
+	@cp $(BUILDDIR)/$(MAIN).pdf $(OUTDIR)/$(OUT)_$(DATE).pdf
 
 dated: all
 	@ls -t $(OUTDIR)/$(MAIN)_*.pdf | head -1
