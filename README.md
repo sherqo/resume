@@ -26,6 +26,22 @@ sudo pacman -Syu texlive-core texlive-fontsrecommended texlive-fonts-extra texli
 sudo pacman -S perl-yaml-tiny perl-file-homedir
 ```
 
+On Mac:
+
+```zsh
+brew install --cask mactex
+echo 'export PATH="/Library/TeX/texbin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+and
+
+```zsh
+brew install perl
+curl -L https://cpanmin.us | perl - App::cpanminus
+cpanm YAML::Tiny
+```
+
 ## Build
 
 ```bash
