@@ -2,8 +2,6 @@
 \LoadClass[11pt,letterpaper]{article}
 \usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
 \usepackage[parfill]{parskip}
-\usepackage{array}
-\usepackage{ifthen}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \pagestyle{empty}
@@ -19,6 +17,26 @@
 % \usepackage{stix2}        % so readable really and not bad 
 
 \setlist[itemize]{nosep}
+
+\newcommand{\resumeBulletsStart}{\begin{itemize}[leftmargin=*,nosep]}
+\newcommand{\resumeBulletsEnd}{\end{itemize}}
+
+\newcommand{\resumeProjectEntry}[3]{%
+	{\bf #1} \hfill #2
+	\vspace{-2pt}
+	\begin{itemize}
+	#3
+	\end{itemize}
+}
+
+\newcommand{\resumeExperienceEntry}[5]{%
+	{\bf #1} \hfill {#2}\\
+	{\it #3} \hfill {\it #4}
+	\vspace{-2pt}
+	\begin{itemize}
+	#5
+	\end{itemize}
+}
 
 \def \name#1{\def\@name{#1}}
 \def \@name {}
