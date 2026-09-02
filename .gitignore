@@ -4,6 +4,7 @@ output/
 *.aux
 *.out
 *.pdf
+!public/resume.pdf
 *.synctex.gz
 *.fls
 *.fdb_latexmk
